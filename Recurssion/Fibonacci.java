@@ -7,11 +7,8 @@ public class Fibonacci{
         System.out.println(fiboncci(n));
     }
     public static int fiboncci(int n){
-        if(n ==0){
-            return 0;
-        }
-        if(n ==1){
-            return 1;
+        if(n ==0 || n==1){
+            return n;
         }
 
         return fiboncci(n-1) + fiboncci(n-2);
