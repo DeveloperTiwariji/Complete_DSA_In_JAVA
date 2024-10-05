@@ -3,7 +3,7 @@ import java.util.*;
 public class Spiral_of_2Darray{
     public static void main(String[] args){
 
-        int matrix[][] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16},{17,18,19,20}};
+        int matrix[][] = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
         int minr =0;
         int minc =0;
         int maxr =  matrix.length-1;
@@ -11,26 +11,34 @@ public class Spiral_of_2Darray{
         int counte =0;
         int totalElement = matrix.length*matrix[0].length;
         while(counte<totalElement){
+            if(counte<totalElement){
         for(int i=minc;i<=maxc;i++){
             System.out.print(matrix[minr][i]+" ");
             counte++;
         }
         minr++;
+            }
+            if(counte<totalElement){
         for(int i=minr;i<=maxr;i++){
             System.out.print(matrix[i][maxc]+" ");
             counte++;
         }
         maxc--;
+            }
+            if(counte<totalElement){
         for(int i=maxc;i>=minc;i--){
             System.out.print(matrix[maxr][i]+" ");
             counte++;
         }
         maxr--;
+            }
+            if(counte<totalElement){
         for(int i =maxr;i>=minr;i--){
             System.out.print(matrix[i][minc]+" ");
             counte++;
         }
         minc++;
+            }
         }
 
     }
