@@ -3,16 +3,19 @@ import java.util.*;
 public class Subsequence{
     public static void main(String[] args){
         String s = "abc";
-        subSequence(s,"");
+        System.out.println(subSequence(s,""));
     }
-    public static void subSequence(String s,String ans){
+    //static int count =0;
+    public static int subSequence(String s,String ans){
 
         if(s.length() ==0){
             System.out.print(ans+" ");
-            return;
+            //count++;
+            return 1;
         }
         char ch = s.charAt(0);
-        subSequence(s.substring(1),ans);
-        subSequence(s.substring(1),ans+ch);
+        int a1 = subSequence(s.substring(1),ans);
+        int b1 = subSequence(s.substring(1),ans+ch);
+        return a1+b1;
     }
 }
