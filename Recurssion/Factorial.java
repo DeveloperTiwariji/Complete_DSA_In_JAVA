@@ -11,8 +11,8 @@ public class Factorial{
         if(n==0){
             return 1;
         }
-        int fn = factHead(n-1);
-        return n*fn;
+        // int fn = factHead(n-1);
+        return n*factHead(n-1);
     }
 
     public static int factTail(int n,int ans){
