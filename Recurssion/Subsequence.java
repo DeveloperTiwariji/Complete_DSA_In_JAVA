@@ -3,7 +3,7 @@ import java.util.*;
 public class Subsequence{
     public static void main(String[] args){
         String s = "abc";
-        System.out.println(subSequence(s,""));
+        System.out.println(subSequence(s,"")-1);
     }
     //static int count =0;
     public static int subSequence(String s,String ans){
