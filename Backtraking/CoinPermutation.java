@@ -2,21 +2,23 @@ import java.util.*;
 
 public class CoinPermutation{
     public static void main(String[] args){
-        int [] coin = {2, 3, 6, 7};
-        int amount = 7;
-        Permutation(coin,amount,"");
+        int [] coin = {1, 2, 3};
+        int amount = 4;
+        System.out.println(Permutation(coin,amount,""));
     }
-    public static void Permutation(int [] coin, int amount, String ans){
+    public static int Permutation(int [] coin, int amount, String ans){
        
        if(amount == 0){
         System.out.println(ans);
-        return;
+        return 1;
        }
-
+        
+        int count =0;
         for(int i =0;i<coin.length;i++){
             if(amount >= coin[i]){
-                Permutation(coin, amount-coin[i], ans+coin[i]);
+               count+=  Permutation(coin, amount-coin[i], ans+coin[i]);
             }
         }
+        return count;
     }
 }
