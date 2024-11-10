@@ -12,10 +12,10 @@ public class Rat_chases_its_cheese {
         
         System.out.println("Insert the value inside maze matrix: ");
         
-        // Read the newline character after m
+        
         sc.nextLine();
         
-        // Modified input processing
+       
         for(int i = 0; i < n; i++) {
             String s = sc.next();
             for(int j = 0; j < s.length(); j++) {
@@ -28,7 +28,7 @@ public class Rat_chases_its_cheese {
     }
 
     public static void Ratinmaze(int maze[][], int curr, int curc, int[][] ans) {
-        // Modified termination condition
+      
         if(curr == maze.length-1 && curc == maze[0].length-1 && maze[curr][curc] != 'X') {
             ans[curr][curc] = 1;
             display(ans);
@@ -39,7 +39,7 @@ public class Rat_chases_its_cheese {
             return;
         }
 
-        maze[curr][curc] = 'X';  // marking as visited
+        maze[curr][curc] = 'X';  
         ans[curr][curc] = 1;
         
         Ratinmaze(maze, curr, curc-1, ans); // Left
