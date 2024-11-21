@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Phone_No_Combinations{
-    static String code[] = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+    static String code[] = {"","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
     public static void main(String[] args){
         String digit = "23";
         printCombination(digit,"");
