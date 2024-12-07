@@ -7,8 +7,7 @@ public class Stack1{
         s.push(40);
         s.push(80);
         s.push(90);
-        s.push(20);
-        s.push(10);
+        
         System.out.println(s);
     }
 }
