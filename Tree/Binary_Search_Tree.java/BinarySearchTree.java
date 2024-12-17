@@ -7,6 +7,7 @@ public class BinarySearchTree{
         bst.preOrder();
         System.out.println();
         System.out.println(bst.maxNode());
+        System.out.println(bst.findNode(10));
     }
 
     public class Node{
@@ -59,5 +60,22 @@ public class BinarySearchTree{
 
         int right = maxNode(node.right);
         return Math.max(node.data, right);
+    }
+
+     public boolean findNode(int item){
+        return findNode(this.root, item);
+    }
+
+    private boolean findNode(Node node, int item){
+        if(node ==null){
+            return false;
+        }
+        if(node.data == item){
+            return true;
+        }else if(node.data>item){
+            return findNode(node.left, item);
+        }else{
+            return findNode(node.right, item);
+        }
     }
 }
