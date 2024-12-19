@@ -8,6 +8,9 @@ public class BinarySearchTree{
         System.out.println();
         System.out.println(bst.maxNode());
         System.out.println(bst.findNode(10));
+        bst.deleteNode(30);
+        System.out.println();
+        bst.preOrder();
     }
 
     public class Node{
@@ -77,5 +80,29 @@ public class BinarySearchTree{
         }else{
             return findNode(node.right, item);
         }
+    }
+
+    public void deleteNode(int key){
+        root =delete(this.root, key);
+    }
+
+    private Node delete(Node node, int key){
+
+        if(node.data<key){
+            node.right = delete(node.right, key);
+        }else if(node.data>key){
+            node.left = delete(node.left, key);
+        }else{
+            if(node.left==null){
+                return node.right;
+            }else if(node.right ==null){
+                return node.left;
+            }else{
+                int max = maxNode(node.left);
+                node.left = delete(node.left,max);
+                node.data = max;
+            }
+        }
+        return node;
     }
 }
