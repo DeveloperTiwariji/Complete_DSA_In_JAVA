@@ -145,14 +145,15 @@ class Binary_Tree{
 
     private void levelOrder(Node node){
         Queue<Node> q = new LinkedList<>();
-        q.add(root);
+        q.add(node);
 
         while(!q.isEmpty()){
             Node rv = q.poll(); // q.remove();
             System.out.print(rv.data+" ");
-
+ 
             if(rv.left!=null){
                 q.add(rv.left);
+                
             }
 
             if(rv.right!=null){
