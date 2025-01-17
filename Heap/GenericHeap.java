@@ -164,8 +164,9 @@ class Cars implements Comparable<Cars> {
      * @return Difference in prices
      */
     public int compareTo(Cars o) {
-        // return this.speed - o.speed;  // To compare based on speed
-        return o.price - this.price;    // Currently comparing based on price
+        return this.speed - o.speed;  // To compare based on speed
+        // return this.price - o.price;    // Currently comparing based on price
+        // return o.price - this.price;
         // return this.color.compareTo(o.color);  // To compare based on color
     }
 }
