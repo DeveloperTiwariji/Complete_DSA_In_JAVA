@@ -16,6 +16,10 @@ public class implementation{
         g.Display();
         System.out.println(g.hashpath(1,7,new HashSet<>()));
         g.printallpath(1,7,new HashSet<>(), "1");
+        System.out.println(g.BFS(1,6));
+        System.out.println(g.DFS(1,6));
+        g.BFT();
+        g.DFT();
     }
 }
 
@@ -111,5 +115,111 @@ class Graph{
         visited.remove(src);
 
     } 
+
+    public boolean BFS(int src, int des){
+        HashSet<Integer> visited = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+        q.add(src);
+        while(!q.isEmpty()){
+            int rv = q.poll(); //step1
+
+            if(visited.contains(rv)){
+                continue;                 //step2
+            }
+
+            visited.add(rv);  //step3
+
+            if(rv==des){
+                return true;
+            }
+
+            for(int nbr: map.get(rv).keySet()){
+                if(!visited.contains(nbr)){
+                    q.add(nbr);
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean DFS(int src, int dsc){
+        HashSet<Integer> visited = new HashSet<>();
+        Stack<Integer> st = new Stack<>();
+        st.push(src);
+        while(!st.isEmpty()){
+            int rv = st.pop();
+            if(visited.contains(rv)){
+                continue;
+            }
+
+            visited.add(rv);
+            if(rv==dsc){
+                return true;
+            }
+
+            for(int nbr: map.get(rv).keySet()){
+                if(!visited.contains(nbr)){
+                    st.push(nbr);
+                }
+            }
+        }
+        return false;
+    }
+
+    public void BFT(){
+         HashSet<Integer> visited = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+        for(int src: map.keySet()){
+            if(visited.contains(src)){
+                continue;
+            }
+        q.add(src);
+        while(!q.isEmpty()){
+            int rv = q.poll(); //step1
+
+            if(visited.contains(rv)){
+                continue;                 //step2
+            }
+
+            visited.add(rv);  //step3
+
+            System.out.print(rv+" ");
+
+            for(int nbr: map.get(rv).keySet()){
+                if(!visited.contains(nbr)){
+                    q.add(nbr);
+                }
+            }
+        }
+        System.out.println();
+        }
+    }
+
+     public void DFT(){
+        HashSet<Integer> visited = new HashSet<>();
+        Stack<Integer> st = new Stack<>();
+        for(int src: map.keySet()){
+            if(visited.contains(src)){
+                continue;
+            }
+        st.push(src);
+        while(!st.isEmpty()){
+            int rv = st.pop();
+            if(visited.contains(rv)){
+                continue;
+            }
+
+            visited.add(rv);
+            System.out.print(rv+" ");
+
+            for(int nbr: map.get(rv).keySet()){
+                if(!visited.contains(nbr)){
+                    st.push(nbr);
+                }
+            }
+        }
+        System.out.println();
+        }
+    }
    
 }

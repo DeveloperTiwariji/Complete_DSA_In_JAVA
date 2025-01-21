@@ -40,6 +40,8 @@ public class MergeSort{
             right++;
         }
 
+        // System.out.println(l);
+
         for(int i=low;i<=high;i++){
             arr[i] = l.get(i-low);
         }

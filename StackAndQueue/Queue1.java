@@ -11,6 +11,7 @@ public class Queue1{
         q.display();
         System.out.println(q.Dqueue());
         q.display();
+        System.out.println(q.getFront());
     }
 }
 

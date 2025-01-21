@@ -2,9 +2,9 @@ import java.util.*;
 
 public class Subsequence{
     public static void main(String[] args){
-        String s = "cbbd";
+        String s = "abc";
         // List<String> l = new ArrayList<>();
-        System.out.println(subSequence(s,""));
+        int a = subSequence(s,"");
 
         // String x = l.get(0);
         // int len = x.length();
@@ -49,4 +49,6 @@ public class Subsequence{
         }
         return true;
     }
+
+    
 }
