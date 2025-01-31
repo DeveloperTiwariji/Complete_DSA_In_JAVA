@@ -135,7 +135,7 @@ import java.util.*;
         return temp.data;
     }
 
-    public int RemoveAtIndex(int k){
+    public int RemoveAtIndex(int k) throws Exception{
         if(k==0){
             return removeFirst();
         }else if(k==size-1){
@@ -146,6 +146,7 @@ import java.util.*;
             prev.next = current.next;
             current.next = null;
             size--;
+            return current.data;
         }
     }
 

@@ -5,7 +5,7 @@ public class Implementation{
         Hash map = new Hash();
         map.put("Satyam", 38);
         map.put("Shubham", 58);
-        map.put("Sonu", 68);
+        map.put("tonu", 68);
         map.put("Saurabh", 56);
         map.put("Rajan", 70);
         System.out.println(map);
