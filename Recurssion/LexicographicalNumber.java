@@ -2,7 +2,7 @@ import java.util.*;
 
 public class LexicographicalNumber{
     public static void main(String[] args){
-        int n = 1000;
+        int n = 1;
         printLexico(0,n);
     }
     public static void printLexico(int curr,int n){

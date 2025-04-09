@@ -47,3 +47,18 @@ public class MergeSort{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+fun(int a[]){
+    int n = a.length;
+    Stack<Integer> s = new Stack<>();
+}

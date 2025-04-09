@@ -13,7 +13,7 @@ public class Array2D{
                 arr[i][j] =sc.nextInt();
             }
         }
-
+        System.out.println("The 2D array is: ");
         Display(arr);
     }
 

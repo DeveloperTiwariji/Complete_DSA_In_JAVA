@@ -45,3 +45,28 @@ public class QuickSort{
 
     }
 }
+
+
+
+
+
+Node zero = null;
+Node one = null;
+Node two = null;
+Node temp = head;
+while(temp!=null){
+    if(temp.data==0){
+        zero.next =temp;
+        zero = zero.next;
+    
+        
+    }else if(temp.data==1){
+        one.next =temp;
+        one = one.next;
+
+    }else{
+        two.next =temp;
+        two = two.next;
+    }
+    temp = temp.next;
+}

@@ -4,7 +4,7 @@ public class Factorial{
     public static void main(String[] args){
         int n =5;
         System.out.println(factHead(n)); // Head Recurssion=============
-        System.out.println(factTail(n,1));
+        System.out.println(factTail(n,1)); // Tail Recursssion==========
     }
 
     public static int factHead(int n){
